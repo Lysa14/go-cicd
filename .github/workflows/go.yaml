@@ -21,7 +21,10 @@ jobs:
       run: go mod download 
     - name: Build
       run: go build -v
+
     - name: Test
-      uses: robherley/go-test-action@v0
-      with:
-        moduleDirectory: '.'    
+      run: go test -v ./...
+    # - name: Test
+    #   uses: robherley/go-test-action@v0
+    #   with:
+    #     moduleDirectory: '.'    
